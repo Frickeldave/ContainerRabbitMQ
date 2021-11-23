@@ -1,8 +1,8 @@
-FROM 		docker.io/library/rabbitmq:3.9.1-management-alpine
+FROM 		docker.io/library/rabbitmq:3.9.10-management-alpine
 
 LABEL		org.opencontainers.image.authors="David Koenig <dave@frickeldave.de>"
 LABEL		org.opencontainers.image.created="2021-11-23"
-LABEL		org.opencontainers.image.version="3.9.1"
+LABEL		org.opencontainers.image.version="3.9.10"
 LABEL		org.opencontainers.image.url="https://github.com/Frickeldave/ContainerRabbitMQ"
 LABEL		org.opencontainers.image.documentation="https://github.com/Frickeldave/ContainerRabbitMQ/README.md"
 LABEL		org.opencontainers.image.source="https://github.com/Frickeldave/ContainerRabbitMQ"
