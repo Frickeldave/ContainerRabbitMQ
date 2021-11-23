@@ -60,12 +60,13 @@ ENV			RABBITMQ_CONFIG_FILE="/home/appuser/data/rabbitmq.conf"
 RUN 		adduser appuser ${rabbitmq_gname}
 
 RUN 		mkdir -p /home/appuser/data/rabbitmq/data; \
-				mkdir /home/appuser/app/rabbitmq
+			mkdir /home/appuser/app/rabbitmq
 
 COPY 		./start.sh /home/appuser/app/rabbitmq/start.sh
 
-RUN 		chown -R appuser:appuser /home/appuser/data/rabbitmq \
-				&& chown -R appuser:appuser /home/appuser/app/rabbitmq
+RUN 		chown -R appuser:appuser /home/appuser/data/rabbitmq; \
+			chown -R appuser:appuser /home/appuser/app/rabbitmq; \
+			chmod +x /home/appuser/app/rabbitmq/start.sh
 
 USER 		appuser
 
